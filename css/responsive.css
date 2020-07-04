@@ -1,0 +1,76 @@
+
+
+/*Mobile Responsive*/ 
+@media all and (max-width: 786px) {
+    
+}
+
+@media all and (max-width: 500px) {
+
+    .abh_tab_content .abh_image {
+        display: block;
+        float: unset;
+        width: 80px !important;
+        margin-top: 10px !important;
+    }
+
+    .banner.box_vheight_100 {
+        height: auto; 
+    }
+
+    .mouse_scroll_down {
+        position: static !important;
+        display: none; 
+    }
+
+    .banner h1 {
+        margin: 30px auto 0 auto;
+        font-size: 24px;
+        line-height: 28px !important;
+    }
+ 
+    .banner h2.m_b_20 {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .about_section .p_40 {
+        padding: 20px;
+    }
+
+    .heading_style,
+    .heading_style.type_2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .about_section .p_40 {
+        font-size: 18px;
+        line-height: 24px !important;
+    }
+
+    .ptb_50_40,
+    .ptb_80_50,
+    .ptb_80_70 {
+       padding: 40px 0px 30px 0px;
+    }
+
+    section#contact .card {
+        padding: 15px 0 0 0;
+    }
+
+    section#contact .f_20_22 {
+        font-size: 16px;
+        line-height: 18px !important;
+    }
+
+    .f_18_22 {
+        font-size: 16px;
+        line-height: 18px !important;
+    }
+
+    .footer_style1 ul li {
+        padding: 5px 10px;
+    }
+    
+}

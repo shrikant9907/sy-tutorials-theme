@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form Design</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+        <style>
+            
+            /*Design the form*/
+            form.login_form_design {
+                background: #f2f2f2;
+                padding: 30px;
+                border-radius: 4px; 
+                max-width: 400px;
+                width: 100%;
+                margin: 20px auto 0 auto;
+                box-shadow: 0 0 13px -1px rgba(0,0,0,.5);
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            form.login_form_design a {
+                color: #d60724 !important;
+            }
+            
+            /*Center align the heading, logo and signup link*/ 
+            form.login_form_design h2,
+            form.login_form_design .signup_link_wr, 
+            form.login_form_design .form_logo {
+                text-align: center;
+            }
+            
+            /*Set width of the logo image*/
+            form.login_form_design .form_logo img {
+                max-width: 100%;
+                width: 200px;
+            }
+            
+            /*Design fields*/ 
+            form.login_form_design input[type="text"],
+            form.login_form_design input[type="email"],
+            form.login_form_design input[type="password"] {
+                border: 1px solid #ccc;
+                padding: 10px;
+                width: 100%;
+                border-radius: 3px;
+                margin-bottom: 15px;
+                font-size: 14px;
+                font-family: arial;
+                box-sizing: border-box;
+            }
+           
+            /*Design label*/
+            form.login_form_design label {
+                margin-bottom: 5px;
+                display:block;
+            }
+            
+            /*Design Asterisk Sign to read for required fields*/
+            form.login_form_design .req_sign {
+                color:#d60724;
+            }
+            
+            /*Right align forgot password link*/
+            form.login_form_design .forget_password_wr {
+                text-align: right;
+                margin-bottom: 15px;
+            }
+            
+            /*design submit button*/
+            form.login_form_design button,
+            form.login_form_design input[type="submit"] {
+                background: #d60724;
+                color: #fff;
+                font-weight: 600;
+                border: none;
+                padding: 12px 20px;
+                font-size: 15px;
+                border-radius: 3px;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto 15px auto;
+                display: block;
+                cursor: pointer;
+            }
+            
+            /*add hover effect in button*/
+            form.login_form_design button:hover,
+            form.login_form_design input[type="submit"]:hover {
+                box-shadow: 1px 4px 5px -1px rgba(0,0,0,0.5);
+            }
+            
+        </style>
+        
+    </head>
+    <body>  
+         
+            <!--Form HTML Start-->
+                <form action="" class="login_form_design" method="post" autocomplete="off"> 
+                    <h2>User Login</h2>
+                    <div class="form_logo"><img src="http://devwp.tutorsincity.com/wp-content/themes/tutorsincity/images/logo.png" alt="" class="img-fluid" /></div>
+                    
+                    <label><b>Email</b> <span class="req_sign">*</span></label> 
+                    <input type="text" id="user_email" name="user_email" required="required" placeholder="Enter your email or username." />
+                    
+                    <label><b>Password</b> <span class="req_sign">*</span></label>  
+                    <input type="password" maxlength="10" id="user_password" name="user_password" required="required" placeholder="Enter your password." />
+                    
+                    <div class="forget_password_wr"><a href="#">Forgot your password?</a></div>
+
+                    <button name="login_submit" class="form_button" type="submit">Login</button>
+
+                    <div class="signup_link_wr">Don't have an account? <a class="" href="#">Signup</a></div> 
+                </form> 
+            <!--Form HTML End-->
+        
+    </body>
+</html>

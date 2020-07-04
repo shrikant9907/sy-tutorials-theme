@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page Banner</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         
+        <!-- required Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:200,300,400,700" rel="stylesheet"> 
+ 
+        <!-- required CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" />
+    
+        <style>
+            /* We can write custom CSS here*/
+            
+           
+            /*Adding Background Image*/
+            .banner_section { 
+                font-size: 18px;
+                background-image: url('images/bg.png'); /* It will add the image from images folder to banner section background. */
+                background-repeat: no-repeat; /* It will stop image repeation */
+                background-size: cover; /* It will cover the background  */
+                background-position: center; /* It will align the background image in center */
+            } 
+            
+            /*Adding Transparent Mask Over background*/
+            .banner_mask {
+               background: rgba(0,0,0,0.7);
+               left: 0;
+               right:0;
+               top:0;
+               bottom:0;
+               z-index: 0;
+            }
+            
+            .banner_section h2{
+                font-size: 40px;
+            }
+            
+        </style>
+        
+    </head>
+    <body>   
+  
+       
+        <!--Banner Section Start-->
+         
+            <section class="banner_section bg-dark position-relative vh-100 jumbotron text-center text-white mb-0 ">
+                <div class="banner_mask position-absolute"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="mt-5 mb-5 text-warning">Hi <span class='text-primary-color'>There,</span></h2>
+                            <p class="mb-5">I hope you already have some basic understanding of Bootstrap 4.<br >
+                                In this example. I will use most of the classes to design it. This is a simple example of home page banner with some text on it. <br /> 
+                            You can update this text as per you need. I added a background image with transparent black mask on it.</p>
+                            <a href="#" class="btn btn-danger btn-lg border-0 px-5 rounded-0">Start Now</a>
+                        </div>
+                    </div>
+               </div>
+            </section>
+        
+        <!--Banner Section End-->
+             
+        
+        <!--Scripts-->
+        <script type="text/javascript" src="assets/js/jquery.min.js"></script>   
+        <script type="text/javascript" src="assets/js/popper.js"></script>   
+        <script type="text/javascript" src="assets/js/bootstrap.min.js" ></script>   
+        
+        <script>
+            
+            //  We can write Custom Scripts here
+            
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form Design</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            
+            html,
+            body {
+                margin:0px;
+                padding:0px;
+            }
+            
+            .container {
+                max-width: 1200px;
+                width: 100%;
+                margin: 0 auto; 
+                /*Auto margin from left and right - Center align */ 
+            }
+            
+           form {
+                background: #f2f2f2;
+                padding: 30px;
+                border-radius: 4px; 
+                max-width: 400px;
+                width: 100%;
+                margin: 20px auto 0 auto;
+                /*top right bottom left*/
+            }
+            
+            textarea,
+            input[type="email"],
+            input[type="text"] {
+                border: 1px solid #ccc;
+                padding: 10px;
+                width: 100%;
+                border-radius: 3px;
+                margin-bottom: 15px;
+                font-size: 14px;
+                font-family: arial;
+                box-sizing: border-box;
+            }
+           
+            label {
+                margin-bottom: 5px;
+                display:block;
+            }
+            
+            input[type="submit"] {
+                background: #d60724;
+                color: #fff;
+                font-weight: 600;
+                border: none;
+                padding: 10px 20px;
+                font-size: 15px;
+                border-radius: 3px;
+            }
+            
+            input[type="submit"]:hover {
+                cursor: pointer;
+                box-shadow: 1px 4px 5px -1px rgba(0,0,0,0.5);
+            }
+            
+        </style>
+        
+    </head>
+    <body>  
+         
+        <div class="container">
+            
+            <!--Form HTML Start-->
+            <form action="" method="get" autocomplete="off" >
+
+                <label>Name</label>
+                <input type="text" name="user_name" placeholder="Enter your name." required="required"  />
+                
+                <label>Email</label>
+                <input type="email" name="user_email" placeholder="Enter your email." required="required" />
+                
+                <label>Contact Number</label>
+                <input type="text" name="user_contact_no" placeholder="Enter your contact number."  />
+
+                <label>Message</label>
+                <textarea name="user_message" id="user_mobile" rows="4" placeholder="Enter your message." required="required"></textarea>
+                
+                <input type="submit" name="submit_form" value="Submit Now" /> 
+            
+            </form>
+            <!--Form HTML End-->
+            
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Form Design</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        
+        <!--Custom CSS--> 
+        <style>
+            
+            * {
+                box-sizing: border-box; 
+            } 
+            
+            /*Design Search Field Wrapper*/
+            .search_autocomplete_box {
+                max-width: 500px;
+                width: 100%;
+                margin: 50px auto 0 auto;
+                background-color: #667eea;
+                padding: 4px;
+                border-radius: 3px;
+                /*Top Right Bottom Left*/
+            }
+ 
+            /*Design Search Field*/
+            .search_autocomplete_box input[type='text']{
+                width: 100%;
+                padding: 10px;
+                border: none;
+                font-size: 14px;
+            }
+             
+            /*Hide the suggestions initially*/
+            .search_autocomplete_box .suggestions {
+                display:none;
+            }
+            
+            /*Design name of listing*/
+            .search_autocomplete_box .suggestions p {
+                padding: 8px 7px 1px 3px;
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+                color:#fff;
+            }  
+            
+            /*Remove default padding and margins and set background color*/
+            .search_autocomplete_box .suggestions ul {
+                padding: 0;
+                margin: 3px 0 0 0;
+                list-style: none;
+                background: #ddd; 
+            }
+            
+            /*Design list items*/
+            .search_autocomplete_box .suggestions ul li {
+                padding: 8px;
+                background: #fafafa;
+                border-top: 1px solid #ccc;
+                cursor: pointer;
+                display:none;
+            }
+            
+            /*change list item background color on mouse hover*/
+            .search_autocomplete_box .suggestions ul li:hover {
+                background: #ffffff;
+            }
+             
+        </style>
+         
+    </head>
+    <body>   
+         
+            <!--Form HTML Start-->
+            <div class="search_autocomplete_box">
+                <input type="text" name="select_search_name" placeholder="Enter your keywords... eg. Indore, Pune, Bhopal" autocomplete="off" /> 
+                <div class="suggestions">  
+                    <p>Suggestions:</p>
+                    <ul>
+                        <li>Indore</li>
+                        <li>Bhopal</li>
+                        <li>Ujjain</li>
+                        <li>Pune</li>
+                        <li>Dewas</li>
+                        <li>Hoshangabad</li>
+                        <li>Babai</li>
+                        <li>Itarsi</li>
+                    </ul>
+                </div>
+            </div>
+            <!--Form HTML End-->
+            
+    <!--jQuery-->
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    
+    <script>
+        jQuery(document).ready(function(){
+            
+            // Filtering in a list
+            jQuery(".search_autocomplete_box input").on("keyup change", function() { 
+                
+                var searchfield = jQuery(this);
+                var keyword = searchfield.val().toLowerCase();
+                
+                // Check if Keyword lenght greater or equal to 3
+                if(keyword.length>=3) {
+                    
+                    jQuery('.search_autocomplete_box .suggestions').show();
+                
+                    // Filter list 
+                    jQuery(".suggestions ul li").filter(function() {
+                        var filterlist = jQuery(this);
+                        var filtervalue = filterlist.text().toLowerCase().indexOf(keyword) > -1;
+                        
+                        // Show/Hide the list items based on matches 
+                        filterlist.toggle(filtervalue);  
+                        fill_list_value_field(); 
+                    });
+                
+                } else {
+                    
+                    // Hide suggestions if search field emply or keywords are less than 3
+                    jQuery('.search_autocomplete_box .suggestions').hide(); 
+                    
+                }
+            });
+            
+           // Fill List Value in Search field
+           
+           function fill_list_value_field() {
+               jQuery(".suggestions ul li").on('click',function(){
+                   jQuery(".search_autocomplete_box input").val(jQuery(this).text());
+               }); 
+           }
+          
+        });
+    </script>
+    </body>
+
+</html>
