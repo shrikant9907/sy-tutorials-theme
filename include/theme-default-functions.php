@@ -209,7 +209,7 @@ add_filter( 'body_class', 'add_page_name_class' );
 function searchfilter($query) {
  
     if ($query->is_search && !is_admin() ) {
-        $query->set('post_type',array('post','jobs','ourbatches'));
+        $query->set('post_type',array('tutorial'));
     }
  
 return $query;
