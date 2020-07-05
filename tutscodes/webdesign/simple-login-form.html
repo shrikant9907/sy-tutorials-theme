@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Simple Login Form</title>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        
+        <style>            
+            form.user-login {
+                background: #f2f2f2;
+                padding: 20px;
+                max-width: 400px;
+                margin: 0 auto;
+                font-family: 'Roboto', sans-serif;
+                box-sizing: border-box;
+            }
+            
+            form.user-login h2 {
+                text-align: center;
+                margin-top: 0px;
+            }
+            
+            form.user-login input[type="email"],
+            form.user-login input[type="password"] {
+                border: 1px solid #cccccc;
+                padding: 10px;
+                width: 100%;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+           
+            form.user-login .form-btn {
+                background: #EC7056;
+                color: #ffffff;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 3px;
+                width: 100%;
+                cursor: pointer;
+            }            
+        </style>
+        
+    </head>
+    <body>  
+         
+        <!-- Simple Login Form -->
+        <form class="user-login" method="get" autocomplete="off"> 
+            <h2>Simple Login Form</h2>
+            <input type="email" name="useremail" placeholder="Email" required="required" />
+            <input type="password" name="userpass" placeholder="Password" required="required" />
+            <button class="form-btn" type="submit">Login</button>
+        </form> 
+        
+    </body>
+</html>
