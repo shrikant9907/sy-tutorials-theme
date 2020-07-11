@@ -3,7 +3,7 @@
 <?php
 // Current Term
 $term_id = get_queried_object()->term_id;
-$term = get_term_by('id', $term_id, 'examples-category');
+$term = get_term_by('id', $term_id, 'interview-questions-category');
 $term_name = $term->name; 
 $term_slug = $term->slug; 
 $term_taxonomy = $term->taxonomy; 
@@ -18,7 +18,7 @@ $term_taxonomy = $term->taxonomy;
                 <!-- Tutorials List -->
                 <?php
                 $args   =   array(
-                                    'post_type'         =>  'examples',
+                                    'post_type'         =>  'interview-questions',
                                     'posts_per_page'    =>  -1, 
                                     'orderby'           =>  'date', 
                                     'order'             =>  'asc', 
@@ -36,7 +36,7 @@ $term_taxonomy = $term->taxonomy;
                 if(have_posts()):
                 ?>
                 <ul class='list-group list-group-flush list-unstyled m_b_30'> 
-                    <li class="bg_dark2 p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?> examples</li>
+                    <li class="bg_dark2 p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?> interview questions</li>
                     <?php   
                         while(have_posts()): the_post();  
                         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
@@ -83,7 +83,7 @@ $term_taxonomy = $term->taxonomy;
                 <div class="left_side">
                     <?php  
                         $args   =   array(
-                            'post_type'         =>  'examples',
+                            'post_type'         =>  'interview-questions',
                             'posts_per_page'    =>  1, 
                             'orderby'           =>  'date', 
                             'order'             =>  'asc', 
