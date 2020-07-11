@@ -1,10 +1,42 @@
 <?php get_header(); ?> 
  
 <section class="page-section">
-<h1 class="text-white m_b_30 page-heading p_t_90 p_b_30 text-center f_26_28">Blog Details</h1>
+<h1 class="bg_orange bg_orange_grid m_b_30 p_t_20 p_b_20 text-white f_24_26 text-center">Blog Details</h1>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8 ">
+            <div class="col-12 col-sm-3">
+                
+                <?php echo get_sidebar(); ?>
+            
+                <!-- Related Posts -->
+                <div class="category_menus r_5 bg-light p_20 m_b_30">
+                    <p class="m_b_5">Recommended tutorials for you:</p> 
+                    <?php   
+                    // Post Tags
+                    $taxonomies = get_terms( array(
+                            'taxonomy' => 'tutorial_cat', 
+                            'hide_empty' => true,
+                            'parent'=>0,
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        )
+                    );
+
+                    if ( !empty($taxonomies) ) { 
+                        foreach( $taxonomies as $category ) { 
+                        $term_link = get_term_link( $category );
+                            if($category->parent == 0) {
+                                $output.= '<a class="badge badge-primary bg-primary badge-pills btn-sm m_r_5 m_b_5" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                            }
+                        }
+                        echo $output; 
+                    } 
+                    ?>  
+                </div>
+
+
+            </div> 
+            <div class="col-12 col-md-7">
                     <div class="left_side">
                         <?php  
                             if(have_posts()): 
@@ -85,6 +117,8 @@
                             <?php endif; ?>
                         </div>
                         
+                        <?php echo do_shortcode('[starbox id="23"]'); ?>                 
+                                
                         <?php  
                             endwhile; 
                             endif; 
@@ -92,14 +126,11 @@
                 
                     </div>
                 
-                <!--Related Posts-->
-                <?php istl_related_posts(); ?>
-                
-                <?php comment_form(); ?>
+                <?php  //comment_form(); ?>
 
             </div>
             
-            <?php get_sidebar(); ?>  
+            <?php //get_sidebar(); ?>  
             
           </div>
         </div>

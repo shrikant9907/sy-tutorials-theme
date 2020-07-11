@@ -1,20 +1,15 @@
 <?php get_header(); ?>
 
-<section class="page-section">
-    <h1 class="text-white m_b_30 page-heading p_t_90 p_b_30 text-center f_26_28">Error 404</h1>
+<section class="page-section bg-white">
+    <h1 class="text-center p_y_40 f_30_34">Page not found.</h1>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 text-center">
-                <i class="fas fa-frown-open"></i>
-            </div>
-            <div class="col-sm-6">
+            <div class="col-12 text-center">
+                <i class="fas display-1 text_orange fa-frown-open"></i>
                 <div class="p_y_20">
-                    <h2 class="m_b_20 text-danger"><b>Sorry!</b></h2>
-                    <h3 class="text-primary f_20_26 m_b_20">The page your are looking for does not exist.</h3>
-                    <p>I can help you to reach your DESTINATION</p>
-                    <p>You can view <a href='<?php echo site_url('/tutorials'); ?>'>Tutorials</a>, <a href='<?php echo site_url('/blog'); ?>'>Blog</a></p>
-                    <p>OR</p>
-                    <p><a href='<?php echo site_url('/'); ?>'>Go To Homepage</a></p>
+                    <h2 class="m_b_20 text-danger"><b>Opps!</b></h2>
+                    <h3 class="text_orange f_20_26 m_b_20">The page your are looking for does not exist.</h3>
+                    <p><a class="btn btn-primary p_x_30" href='<?php echo site_url('/'); ?>'>Go To Home page</a></p>
                 </div>
             </div>
         </div>

@@ -6,33 +6,22 @@ get_header();
 * Template Name: Tutorials Page
 */
 
+include 'search-form.php';
 ?>
 
-
-    <div class="bg-dark ptb_20_10 text-center">
-        
-        <!--Form HTML Start-->
-        <form action="" class="search_box relative w_600 mx_auto" method="get" autocomplete="off"> 
-            <input type="hidden" name="post_type" value="tutorial" />
-            <input class="r_20 p_x_20 border-0 w-100 p_y_10 m_b_10 " type="text" name="s" required="required" placeholder="Search..." />
-            <button class="bg-transparent border-0 absolute fixed_top_right top_10 c_p right_10" type="submit" title="Search Submit"><i class="fas fa-search"></i></button>
-            <?php $search_result = false; 
-                if($search_result) {
-            ?>
-            <div class="card text-left f_14_18 border-0">    
-                <div class="card-body px-3">
-                <h4 class="card-title f_16_18">Search result:</h4>
-                    <div class="list-group">
-                        <a href="#" class="px-3 list-group-item list-group-item-action"></a>
+    <div class="welcome-message-box bg-white p_t_50 p_b_30">
+        <div class="container">
+            <div class="mx-auto">
+                <div class="row">
+                    <div class="col-12"><h2 class="heading_style m_b_20 text-center text_orange">Welcome to our website</h2>
+                    <div class="m_b_40 mx-auto"> 
+                        <p class="m_b_5 f_16_22 text-dark text-center">Our website is specially design to provide you all basic programs to improve your logic, knowledge about the programing. </p>
+                        <p class="m_b_20 f_16_22 text-dark text-center">You will get a large collection of programs in our website. Initally, We have focused to provide you programs in Web Programing.</p>
+                    </div>
                     </div>
                 </div>
             </div>
-            <?php
-                } 
-            ?>
-        </form>   
-        <!--Form HTML End-->   
-        
+        </div>
     </div>
 
    
@@ -41,9 +30,9 @@ get_header();
         <div class="container">
 
             <!-- Upper Section -->
-           <div class="mx-auto">
+            <div class="mx-auto">
                 <div class="row">
-                    <div class="col-12"><h2 class="heading_style m_b_20 f_40_46 text-center text_primary">Most Popular Tutorials</h2>
+                    <div class="col-12"><h2 class="heading_style m_b_20 text-center text_orange">Post Popular Web Programing Tutorials</h2>
                     <div class="m_b_40 mx-auto"> 
                         <p class="m_b_20 f_16_22 text-dark text-center">This is the recent 5 topics from the different tutorials on our site.</p>
                     </div>
@@ -63,7 +52,7 @@ get_header();
                         <div class="card w_300 w_100p border-0 tutorial_card1 m_b_30 text-dark r_5">
                             <div class="text-center card-body">
                                 <a class="card-icon d-flex h_100 justify-content-center align-items-center" href="<?php echo $term_link; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="" class="img-fluid w_100 m_b_10"></a>
-                                <h3 class="card-title text_primary m_b_10"><?php echo $tutorial['title']; ?></h3>
+                                <h3 class="card-title text_orange m_b_10"><?php echo $tutorial['title']; ?></h3>
                                 <p class="f_14_16"><?php echo $tutorial['content']; ?></p>
                                 <hr /> 
                                 <ul class="list-group list-group-flush list-unstyled text-left m_b_20 f_14_20">
@@ -107,17 +96,25 @@ get_header();
     </section>
     <!-- Section 2 End -->
 
-     <div class="bg_orange bg_orange_grid ptb_60_40 text-white">
-        <div class="container">
+    <?php $programsTitle = $cfs->get('program_title'); ?>    
+    <?php $programsSubTitle = $cfs->get('program_sub_title'); ?>    
+    <?php $programsCategory = $cfs->get('programs_category')['0']['category'];
+                                ?>    
+     <div class=" ptb_60_40 bg-white">
+        <div class="container w_1000">
             <div class="row">
                 <div class="col-12">
-                        <h1 class="font-weight-bold m_b_50 text-center">Basic Web Programming Tutorials</h1>
-                        <p class="text-center">
-                            <a href="<?php echo site_url('/tutorial_cat/html/'); ?>" class="w_200 d-inline-block tdn font_bold bg_light_cyan f_14_20 r_30 p_y_20 m_x_10 m_b_30">HTML Tutorial</a>
-                            <a href="<?php echo site_url('/tutorial_cat/css/'); ?>" class="w_200 d-inline-block tdn font_bold bg_light_cyan f_14_20 r_30 p_y_20 m_x_10 m_b_30">CSS Tutorial</a>
-                            <a href="<?php echo site_url('/tutorial_cat/jquery/'); ?>" class="w_200 d-inline-block tdn font_bold bg_light_cyan f_14_20 r_30 p_y_20 m_x_10 m_b_30">jQuery Tutorial</a>
-                            <a href="<?php echo site_url('/tutorial_cat/bootstrap/'); ?>" class="w_200 d-inline-block tdn font_bold bg_light_cyan f_14_20 r_30 p_y_20 m_x_10 m_b_30">Bootstrap Tutorial</a>
-                        </p>
+                        <h2 class="text_orange font-weight-bold m_b_50 text-center"><?php echo $programsTitle; ?></h2>
+                        <!-- <h3 class="position-absolute text-light"><?php //echo $programsSubTitle; ?></h3> -->
+                        
+                        <div class="category-list text-center p_b_20">
+                            <?php foreach($programsCategory as $procat_id) { 
+                                $term = get_term($procat_id);
+                            ?>
+                                <a href="<?php echo get_term_link($term); ?>" class="r_5  bg-light p_10 p_x_20 border f_14_18 m_r_10 tdn d-inline-block m_b_10"><?php echo $term->name; ?></a>
+                            <?php } ?>
+                        </div>
+                        
                 </div>
             </div>
         </div>  
@@ -127,7 +124,7 @@ get_header();
     <section id="priority" class="ptb_60_40 bg-white d-none">
         <div class="container">
             <div class="row">
-                 <div class="col-12"><h2 class="heading_style m_b_20 f_40_46 text-center text_primary">How It Works</h2> 
+                 <div class="col-12"><h2 class="heading_style m_b_20 f_40_46 text-center text_orange">How It Works</h2> 
                  <p class="m_b_50 f_16_22 text-center">Write your code with unique and different logic. We will check and share it for others.</p>
                  </div>
       

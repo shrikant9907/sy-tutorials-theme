@@ -24,12 +24,12 @@ function istl_interview_questions_post_type() {
 	);
 	
 	// Register post type
-	register_post_type('interview_questions' , array( 
+	register_post_type('interview-questions' , array( 
 		'labels' => $labels,
 		'public' => true,
 		'has_archive' => false,
                 'menu_icon' => 'dashicons-images-alt2',
-		'rewrite' => array('slug' => 'interview_questions'),
+		'rewrite' => array('slug' => 'interview-questions'),
 		'supports' => array('title', 'editor', 'thumbnail')
 	) ); 
 }
@@ -56,7 +56,7 @@ function istl_interview_questions_taxonomy() {
 		'new_item_name' => __("New $singular Name"),
 	);
         
-	register_taxonomy( strtolower('interview_questions_cat'), 'interview_questions', array(
+	register_taxonomy( strtolower('interview-questions-category'), 'interview-questions', array(
 		'public' => true,
 		'show_ui' => true,
 		'show_in_nav_menus' => true,

@@ -1,31 +1,8 @@
 <?php get_header(); ?> 
-<div class="bg-dark ptb_20_10 text-center">
-    
-    <!--Form HTML Start-->
-    <form action="" class="search_box relative w_600 mx_auto" method="get" autocomplete="off"> 
-        <input type="hidden" name="post_type" value="tutorial" />
-        <input class="r_20 p_x_20 border-0 w-100 p_y_10 m_b_10 " value="<?php echo $_GET['s']; ?>" type="text" name="s" required="required" placeholder="Search..." />
-        <button class="bg-transparent border-0 absolute fixed_top_right top_10 c_p right_10" type="submit" title="Search Submit"><i class="fas fa-search"></i></button>
-        <?php $search_result = false; 
-            if($search_result) {
-        ?>
-        <div class="card text-left f_14_18 border-0">    
-            <div class="card-body px-3">
-            <h4 class="card-title f_16_18">Search result:</h4>
-                <div class="list-group">
-                    <a href="#" class="px-3 list-group-item list-group-item-action"></a>
-                </div>
-            </div>
-        </div>
-        <?php
-            } 
-        ?>
-    </form>   
-    <!--Form HTML End-->   
-    
-</div>
+<?php include 'search-form.php'; ?>
+
 <section class="page-section">
-    <h1 class="bg_orange bg_orange_grid m_b_30 p_t_20 p_b_20 text-white f_24_26 text-center">Search result for: <?php the_search_query(); ?></h1>
+    <h1 class="bg-white m_b_30 p_t_20 p_b_20 f_24_26 text-center">Search result for: <?php the_search_query(); ?></h1>
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-3">

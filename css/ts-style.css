@@ -146,7 +146,9 @@ h6 {
 /***************************Header CSS Start*****************************/
 
 header {
-	background: #4B4453;
+
+    background: #4B4453;
+    background-image: linear-gradient(to left, #4b4453, #53374f, #5e2640, #641127, #610000);
 }
 
 header .menu_bar {
