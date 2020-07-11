@@ -22,17 +22,17 @@ function programs_post_type() {
 	);
 	
 	// Register post type
-	register_post_type('Programs' , array( 
+	register_post_type('programs' , array( 
 		'labels' => $labels,
 		'public' => true,
 		'show_in_menu'       => true,
 		'show_in_rest'       => true,
 		'query_var'          => true,
-        'rest_base'          => 'Programs',
+        'rest_base'          => 'programs',
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 		'has_archive' => false,
                 'menu_icon' => 'dashicons-images-alt2',
-		'rewrite' => array('slug' => 'Programs'),
+		'rewrite' => array('slug' => 'programs'),
 		'supports' => array('title', 'editor', 'thumbnail'),
 		'taxonomies'       => array('programs-category', 'programs-tags')
 	) ); 
