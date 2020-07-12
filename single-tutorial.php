@@ -136,7 +136,9 @@ $term_id = $term_obj_list['0']->term_id;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_1<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: true,
-                                                matchBrackets: true
+                                                matchBrackets: false,
+                                                mode: "php",
+                                                readOnly: true
                                               });
 
                                             </script> 
@@ -155,7 +157,9 @@ $term_id = $term_obj_list['0']->term_id;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_2<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: true,
-                                                matchBrackets: true
+                                                matchBrackets: false,
+                                                mode: "php",
+                                                readOnly: true
                                               });
 
                                             </script> 

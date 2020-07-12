@@ -1,6 +1,8 @@
 <?php get_header(); ?> 
 
 <?php
+define('CODEPATH', get_template_directory().'/tutscodes/');
+
 // Current Term
 $term_id = get_queried_object()->term_id;
 $term = get_term_by('id', $term_id, 'tutorial_cat');
@@ -149,7 +151,9 @@ $term_taxonomy = $term->taxonomy;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_1<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: false,
-                                                matchBrackets: false
+                                                matchBrackets: false,
+                                                mode: "php",
+                                                readOnly: true
                                               });
 
                                             </script> 
@@ -168,7 +172,9 @@ $term_taxonomy = $term->taxonomy;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_2<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: false,
-                                                matchBrackets: false
+                                                matchBrackets: false,
+                                                mode: "php",
+                                                readOnly: true
                                               });
 
                                             </script> 
