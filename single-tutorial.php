@@ -122,7 +122,8 @@ $term_id = $term_obj_list['0']->term_id;
                                         foreach($tutorials as $tutorial){
                                             
                                             $text = $tutorial['_text'];
-                                            $image = $tutorial['_image'];   
+                                            $image = $tutorial['_image'];
+                                            $mode = $tutorial['mode'];
                                             $code = htmlspecialchars($tutorial['_code']);
                                             $code2 = htmlspecialchars($tutorial['_code2']);
                                               
@@ -136,10 +137,10 @@ $term_id = $term_obj_list['0']->term_id;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_1<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: true,
-                                                matchBrackets: false,
-                                                mode: "php",
+                                                matchBrackets: true,
+                                                mode: "<?php echo $mode; ?>",
                                                 readOnly: true
-                                              });
+                                            });
 
                                             </script> 
                                                  <?php
@@ -157,10 +158,10 @@ $term_id = $term_obj_list['0']->term_id;
                                               var editor = CodeMirror.fromTextArea(document.getElementById("showcode_2<?php echo $count; ?>"), {
                                                 lineNumbers: true,
                                                 styleActiveLine: true,
-                                                matchBrackets: false,
-                                                mode: "php",
+                                                matchBrackets: true,
+                                                mode: "<?php echo $mode; ?>",
                                                 readOnly: true
-                                              });
+                                            });
 
                                             </script> 
                                              

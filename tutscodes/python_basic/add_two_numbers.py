@@ -15,4 +15,4 @@ print("Sum of Two Number: " + str(sum))
 
 # OR
 # Second Trick
-# print("Sum of {0} and {1} is {2}.".format(n1, n2, sum))
+# print("Sum of {0} and {1} is: {2}".format(number1, number2, sum))

@@ -1,6 +1,6 @@
 <?php get_header();
 
-$programsPath = get_template_directory().'/tutscodes/programs/php/';
+$programsPath = get_template_directory().'/tutscodes/programs/';
 $term_taxonomy = 'programs-category';
 $term_obj_list = get_the_terms( $post->ID, $term_taxonomy );
 $term_id = $term_obj_list['0']->term_id;
@@ -114,7 +114,7 @@ $term_name = $term_obj_list['0']->name;
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/css.js"></script>
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/clike.js"></script>
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/php.js"></script> 
-                                        <!-- <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script>  -->
+                                        <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script> 
                                         <?php 
                                         $count = 1;
                                         foreach($methods as $method){
@@ -129,8 +129,7 @@ $term_name = $term_obj_list['0']->name;
                                                 $note = $option['note'];
                                                 $file = htmlspecialchars($option['file']);
                                                 if($file!=''){   
-                                                    // Get File 
-                                                    $headerfile = $programsPath.$file;    
+                                                    $headerfile = $programsPath.$mode.'/'.$file;    
                                                     $headercode = htmlspecialchars(file_get_contents($headerfile));  
                                                     echo "<textarea id='showcode_2$count'>$headercode</textarea>";
                                                 ?>
