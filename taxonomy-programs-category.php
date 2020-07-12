@@ -84,9 +84,9 @@ $term_taxonomy = $term->taxonomy;
                     <?php  
                         $args   =   array(
                             'post_type'         =>  'programs',
-                            'posts_per_page'    =>  1, 
+                            'posts_per_page'    =>  5, 
                             'orderby'           =>  'date', 
-                            'order'             =>  'asc', 
+                            'order'             =>  'desc', 
                             'tax_query'         =>  array(
                                                         array(
                                                                 'taxonomy' => $term_taxonomy,
