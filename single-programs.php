@@ -4,6 +4,7 @@ $programsPath = get_template_directory().'/tutscodes/programs/php/';
 $term_taxonomy = 'programs-category';
 $term_obj_list = get_the_terms( $post->ID, $term_taxonomy );
 $term_id = $term_obj_list['0']->term_id;
+$term_name = $term_obj_list['0']->name;
 
  ?> 
            
@@ -34,7 +35,7 @@ $term_id = $term_obj_list['0']->term_id;
                 if(have_posts()):
                 ?>
                 <ul class='list-group list-group-flush list-unstyled m_b_30'> 
-                    <li class="bg_dark2 p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?> Tutorial</li>
+                    <li class=" r_2 bg_orange p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?></li>
                     <?php   
                         while(have_posts()): the_post();  
                         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
@@ -52,7 +53,7 @@ $term_id = $term_obj_list['0']->term_id;
 
                 <!-- Related Posts -->
                 <div class="category_menus r_5 bg-light p_20 m_b_30">
-                    <p class="m_b_5">Recommended tutorials for you:</p> 
+                    <p class="m_b_5">Recommended programs for you:</p> 
                     <?php   
                     // Post Tags
                     $taxonomies = get_terms( array(
