@@ -44,6 +44,11 @@ body {
 	background: #EC7056 !important;	
 }
 
+.bg_orange_gredient {
+	background-image: linear-gradient(to bottom, #ec7056, #ef8052, #ef9151, #eea152, #ecb156);
+	/* background-image: linear-gradient(to top, #ec7056, #ea695f, #e66368, #e15f71, #da5b79); */
+}
+
 .bg_dark_purple {
 	background: #8E5345 !important;
 }
@@ -103,14 +108,13 @@ body {
 .heading,
 .sub_heading,
 .main_heading,
-.poppins_font,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .main-heading {
@@ -146,9 +150,11 @@ h6 {
 /***************************Header CSS Start*****************************/
 
 header {
-
-    background: #4B4453;
-    background-image: linear-gradient(to left, #4b4453, #53374f, #5e2640, #641127, #610000);
+    background: #ED7654;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
 }
 
 header .menu_bar {
@@ -795,4 +801,8 @@ ul.check_listing li i, ul.check_listing li svg {
 .CodeMirror {
 	height: auto !important;
 	margin-bottom: 10px;
+}
+
+.lp-banner {
+	
 }

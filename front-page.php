@@ -6,17 +6,17 @@ get_header();
 * Template Name: Tutorials Page
 */
 
-include 'search-form.php';
+// include 'search-form.php';
 ?>
 
-    <div class="welcome-message-box bg-white p_t_50 p_b_30">
+    <div class="lp-banner bg_orange_gredient p_t_100 p_b_30 vh_100">
         <div class="container">
-            <div class="mx-auto">
+            <div class="mx-auto text-left">
                 <div class="row">
-                    <div class="col-12"><h2 class="heading_style m_b_20 text-center text_orange">Welcome to our website</h2>
-                    <div class="m_b_40 mx-auto"> 
-                        <p class="m_b_5 f_16_22 text-dark text-center">Our website is specially design to provide you all basic programs to improve your logic, knowledge about the programing. </p>
-                        <p class="m_b_20 f_16_22 text-dark text-center">You will get a large collection of programs in our website. Initally, We have focused to provide you programs in Web Programing.</p>
+                    <div class="col-12"><h2 class="m_b_20 text-white">Welcome to our website</h2>
+                    <div class="m_b_40"> 
+                        <p class="m_b_5 f_16_22 text-white">Our website is specially design to provide you all basic programs to improve your logic, knowledge about the programing. </p>
+                        <p class="m_b_20 f_16_22 text-white">You will get a large collection of programs in our website. Initally, We have focused to provide you programs in Web Programing.</p>
                     </div>
                     </div>
                 </div>
