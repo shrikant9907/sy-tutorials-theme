@@ -9,14 +9,14 @@ get_header();
 // include 'search-form.php';
 ?>
 
-    <div class="lp-banner bg_orange_gredient p_t_100 p_b_30 vh_100">
-        <div class="container">
-            <div class="mx-auto text-left">
+    <div class="lp-banner p_t_100 p_b_30">
+        <div class="container w_1000">
+            <div class="mx-auto text-center">
                 <div class="row">
-                    <div class="col-12"><h2 class="m_b_20 text-white">Welcome to our website</h2>
+                    <div class="col-12"><h1 class="m_t_10 font_bold m_b_20">Welcome to AllPrograms.tech</h1>
                     <div class="m_b_40"> 
-                        <p class="m_b_5 f_16_22 text-white">Our website is specially design to provide you all basic programs to improve your logic, knowledge about the programing. </p>
-                        <p class="m_b_20 f_16_22 text-white">You will get a large collection of programs in our website. Initally, We have focused to provide you programs in Web Programing.</p>
+                        <p class="m_b_5 f_16_22">Our website is specially design to provide you all basic programs to improve your logic, knowledge about the programing. </p>
+                        <p class="m_b_20 f_16_22">You will get a large collection of programs in our website. Initally, We have focused to provide you programs in Web Programing.</p>
                     </div>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ get_header();
 
             <?php $topTutorials = $cfs->get('top_tutorials'); ?>
             <div class="container mx-auto">
-                <div class="row">
+                <div class="form-row">
 
                 <?php foreach($topTutorials as $tutorial) {
                     $term_id = $tutorial['category']['0']; 

@@ -1,18 +1,17 @@
 <?php
-
 // Number
-$number = 140;
-$isPrimeNummber = false;
+$number = 138;
+$isPrimeNumber = true;
 
 // Using for loop
 for ($n = 2; $n < $number; $n++) {
-    if($number%$n==0) {
-        $isPrimeNummber = true;
+    if($number%$n == 0) {
+        $isPrimeNumber = false;
         break;
     }
 }
 
-if ($isPrimeNummber) {
+if ($isPrimeNumber) {
     echo "$number is prime number.";
 } else {
     echo "$number is prime not number.";
