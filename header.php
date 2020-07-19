@@ -36,8 +36,8 @@
                         <div class="col-12 header_mobile_control">
                             <div class="header_menus d-inline-block w-100">
                                 <nav class="navbar navbar-expand-lg w-100 navbar-dark">
-                                    <a class="d-block font-weight-bold poppins_font f_l_h_0 w_200 navbar-brand p_l_10 f_24_30" href="<?php echo site_url('/'); ?>">
-                                        <span class="tdn"><?php echo bloginfo('name'); ?></span>
+                                    <a class="d-block font-weight-bold f_l_h_0 w_200 navbar-brand p_l_10 f_24_30" href="<?php echo site_url('/'); ?>">
+                                        <span class="tdn text-uppercase heading"><?php echo bloginfo('name'); ?></span>
                                     </a>
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                                     </button>
@@ -56,23 +56,24 @@
                                                     <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/c-plus-plus/'); ?>">Programs in C++</a> -->
                                                 </div>
                                             </li>
-                                            <li class="nav-item dropdown d-none">
+                                            <li class="nav-item dropdown">
                                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Tutorials
                                                 </a>
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML Tutorial</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/css/'); ?>">CSS Tutorial</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/jquery/'); ?>">jQuery Tutorial</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/bootstrap/'); ?>">Bootstrap Tutorial</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/python/'); ?>">Python Tutorial</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/django/'); ?>">Django Tutorial</a>
                                                     <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/php-development/'); ?>">PHP Tutorial</a>
                                                     <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/wordpress/'); ?>">WordPress Tutorial</a>
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML & CSS Tutorial</a>
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/css/'); ?>">CSS Tutorial</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/jquery/'); ?>">jQuery Tutorial</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/bootstrap/'); ?>">Bootstrap Tutorial</a> -->
+                                                    <!-- <div class="dropdown-divider"></div> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/python/'); ?>">Python Tutorial</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/django/'); ?>">Django Tutorial</a> -->
                                                 </div>
                                             </li>
-                                            <li class="nav-item dropdown">
+                                            <li class="nav-item dropdown d-none">
                                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Examples
                                                 </a>
