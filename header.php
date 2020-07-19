@@ -51,12 +51,12 @@
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="<?php echo site_url('/programs-category/php/'); ?>">Programs in PHP</a>
                                                     <a class="dropdown-item" href="<?php echo site_url('/programs-category/python/'); ?>">Programs in Python</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/programs-category/c/'); ?>">Programs in C</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/programs-category/c-plus-plus/'); ?>">Programs in C++</a>
+                                                    <!-- <div class="dropdown-divider"></div> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/c/'); ?>">Programs in C</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/c-plus-plus/'); ?>">Programs in C++</a> -->
                                                 </div>
                                             </li>
-                                            <li class="nav-item dropdown">
+                                            <li class="nav-item dropdown d-none">
                                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Tutorials
                                                 </a>
@@ -79,15 +79,15 @@
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="<?php echo site_url('/examples-category/html-and-css/'); ?>">HTML & CSS Examples</a>
                                                     <a class="dropdown-item" href="<?php echo site_url('/examples-category/bootstrap/'); ?>">Bootstrap Examples</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/examples-category/php/'); ?>">PHP examples</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/examples-category/python/'); ?>">Python examples</a>
-                                                    <div class="dropdown-divider"></div>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/examples-category/jquery/'); ?>">jQuery examples</a>
-                                                    <a class="dropdown-item" href="<?php echo site_url('/examples-category/javascript/'); ?>">JavaScript examples</a>
+                                                    <!-- <div class="dropdown-divider"></div> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/php/'); ?>">PHP examples</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/python/'); ?>">Python examples</a> -->
+                                                    <!-- <div class="dropdown-divider"></div> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/jquery/'); ?>">jQuery examples</a> -->
+                                                    <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/javascript/'); ?>">JavaScript examples</a> -->
                                                 </div>
                                             </li>
-                                            <li class="nav-item dropdown">
+                                            <li class="nav-item dropdown  d-none">
                                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 Interview Questions
                                                 </a>

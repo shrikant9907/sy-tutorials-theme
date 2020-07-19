@@ -21,9 +21,9 @@ body {
 	color: #343a40;
 }
 
-.container {
-	max-width: 98%;
-}
+/* .container {
+	max-width: 90%;
+} */
 
 /*Theme Colors*/
 .text_primary, .link, a {

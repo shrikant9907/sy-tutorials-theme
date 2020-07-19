@@ -16,7 +16,7 @@ get_header();
                     <div class="col-12"><h1 class="m_t_10 f_40_44 m_b_20 text_orange"><span class="f_20_22 text-dark d-block w-100 m_b_10">Programing is all about practice.</span>Try more programs,<br />Learn with more examples, <br />Improve your logic.</h1>
                     <div class="m_b_40"> 
                         <p class="m_b_30 f_16_22">Our website is specially designed for beginers who want to learn with practice.<br /> We have tried to provide you all types of programs on our website for PHP.</p>
-                        <p><a class="btn btn-primary p_x_40 p_y_10 f_14_16" href="#">Start Now <i class="m_l_5 fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                        <p><a class="btn btn-primary p_x_40 p_y_10 f_14_16" href="#learnprograms">Start Now <i class="m_l_5 fa fa-arrow-right" aria-hidden="true"></i></a></p>
                     </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ get_header();
 
    
    <!-- Section 2 Start -->
-    <section class="ptb_60_40 bg_grey">
+    <section id="learnprograms" class="ptb_60_40 bg_grey">
         <div class="container">
 
             <!-- Upper Section -->

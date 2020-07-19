@@ -36,7 +36,7 @@ $term_taxonomy = $term->taxonomy;
                 if(have_posts()):
                 ?>
                 <ul class='list-group list-group-flush list-unstyled m_b_30'> 
-                    <li class="bg_dark2 p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?></li>
+                    <li class="bg_orange p_y_10 p_x_20 text-white font_bold"><?php echo $term_name; ?></li>
                     <?php   
                         while(have_posts()): the_post();  
                         $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
