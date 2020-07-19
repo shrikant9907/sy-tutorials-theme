@@ -2,7 +2,7 @@
 
 /* Color Code
 https://mycolor.space/?hex=%232F4858&sub=1
-Orange: #EC7056
+Orange: #ED7654
 Yello: #FFB352
 Blue Dark: #4B4453
 Blue Dark2: #47408C
@@ -35,18 +35,18 @@ body {
 }
 
 .text_orange {
-	color: #EC7056; 
+	color: #ED7654; 
 }
 
 .bg_orange, 
 .bg-primary,
 .bg_primary {
-	background: #EC7056 !important;	
+	background: #ED7654 !important;	
 }
 
 .bg_orange_gredient {
-	background-image: linear-gradient(to bottom, #ec7056, #ef8052, #ef9151, #eea152, #ecb156);
-	/* background-image: linear-gradient(to top, #ec7056, #ea695f, #e66368, #e15f71, #da5b79); */
+	background-image: linear-gradient(to bottom, #ED7654, #ef8052, #ef9151, #eea152, #ecb156);
+	/* background-image: linear-gradient(to top, #ED7654, #ea695f, #e66368, #e15f71, #da5b79); */
 }
 
 .bg_dark_purple {
@@ -54,7 +54,7 @@ body {
 }
 
 .bg_orange_grid {
-	background-image: linear-gradient(to bottom, #bb4931, #c7533a, #d35c43, #e0664d, #ec7056);
+	background-image: linear-gradient(to bottom, #bb4931, #c7533a, #d35c43, #e0664d, #ED7654);
 }
 
 .bg_yellow {
@@ -87,9 +87,9 @@ body {
 
 .btn-primary:hover,
 .btn-primary {
-    border: 1px solid #EC7056;
+    border: 1px solid #ED7654;
  	color: #fff;
-    background-color: #EC7056 !important;
+    background-color: #ED7654 !important;
 }
 
 .btn-yellow {
@@ -98,7 +98,7 @@ body {
 }
 
 .btn-yellow:hover {
-    background-color: #EC7056 !important;
+    background-color: #ED7654 !important;
 }
 
 .bg_light_cyan {
@@ -666,7 +666,7 @@ ul.check_listing li i, ul.check_listing li svg {
 }
 
 .tutorial_card1 .card-body {
-    min-height: 425px;
+    height: 220px;
     position: relative;
     padding-bottom: 58px;
 }
@@ -803,6 +803,11 @@ ul.check_listing li i, ul.check_listing li svg {
 	margin-bottom: 10px;
 }
 
-.lp-banner {
-	
+img.lp-img {
+    position: absolute;
+    right: 35px;
+    top: 123px;
+    border-radius: 21px;
+    box-shadow: 0px 2px 8px 10px rgba(0,0,0,0.2);
 }
+

@@ -205,7 +205,7 @@ $term_taxonomy = $term->taxonomy;
                         wp_reset_query();
                         endif; 
                     ?>      
-                    <?php echo do_shortcode('[starbox id="23"]'); ?>       
+                    <?php // echo do_shortcode('[starbox id="23"]'); ?>       
                 </div> 
             </div>
         </div>

@@ -210,7 +210,7 @@ $term_id = $term_obj_list['0']->term_id;
                             <?php endif; ?>
                         </div>
                         
-                        <?php echo do_shortcode('[starbox id="23"]'); ?>                 
+                        <?php // echo do_shortcode('[starbox id="23"]'); ?>                 
                         
                         <?php  
                             endwhile; 

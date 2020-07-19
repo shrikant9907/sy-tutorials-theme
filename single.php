@@ -117,7 +117,7 @@
                             <?php endif; ?>
                         </div>
                         
-                        <?php echo do_shortcode('[starbox id="23"]'); ?>                 
+                        <?php // echo do_shortcode('[starbox id="23"]'); ?>                 
                                 
                         <?php  
                             endwhile; 
